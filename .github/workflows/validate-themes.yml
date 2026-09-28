@@ -29,11 +29,11 @@ jobs:
           walk('.');
           for (const file of files) JSON.parse(fs.readFileSync(file, 'utf8'));
           const catalog = JSON.parse(fs.readFileSync('catalog/index.json', 'utf8'));
-          if (!Array.isArray(catalog.themes) || catalog.themes.length === 0) throw new Error('catalog.themes is empty');
+          if (!Array.isArray(catalog.items) || catalog.items.length === 0) throw new Error('catalog.items is empty');
           const ids = new Set();
-          for (const item of catalog.themes) {
+          for (const item of catalog.items) {
             if (ids.has(item.id)) throw new Error(`duplicate catalog id: ${item.id}`);
             ids.add(item.id);
-            if (!/^https:\/\/raw\.githubusercontent\.com\//.test(item.downloadUrl)) throw new Error(`invalid downloadUrl: ${item.id}`);
+            if (!item.file || item.file.startsWith('http:') || item.file.startsWith('javascript:')) throw new Error(`invalid file: ${item.id}`);
           }
           NODE

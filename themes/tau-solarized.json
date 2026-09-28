@@ -5,16 +5,19 @@
   "name": "Tau Solarized",
   "version": "1.0.0",
   "author": "Tau Editor",
+  "license": "MIT",
   "defaultMode": "system",
   "modes": {
     "light": {
       "colors": {
         "textPrimary": "#334155",
         "textSecondary": "#64748b",
-        "accent": "#0f766e",
-        "accentStrong": "#115e59",
-        "success": "#15803d",
-        "danger": "#b91c1c"
+        "accentBrand": "#0f766e",
+        "accentBrandStrong": "#115e59",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#b91c1c",
+        "bgApp": "#f8fafc",
+        "panelBase": "#ffffff"
       },
       "monaco": "vs"
     },
@@ -22,10 +25,12 @@
       "colors": {
         "textPrimary": "#e2e8f0",
         "textSecondary": "#94a3b8",
-        "accent": "#5eead4",
-        "accentStrong": "#99f6e4",
-        "success": "#86efac",
-        "danger": "#fca5a5"
+        "accentBrand": "#5eead4",
+        "accentBrandStrong": "#99f6e4",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fca5a5",
+        "bgApp": "#0f172a",
+        "panelBase": "#111827"
       },
       "monaco": "vs-dark"
     }
