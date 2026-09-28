@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "tau-solarized",
+  "name": "Tau Solarized",
+  "version": "1.0.0",
+  "author": "Tau Editor",
+  "defaultMode": "system",
+  "modes": {
+    "light": {
+      "colors": {
+        "textPrimary": "#334155",
+        "textSecondary": "#64748b",
+        "accent": "#0f766e",
+        "accentStrong": "#115e59",
+        "success": "#15803d",
+        "danger": "#b91c1c"
+      },
+      "monaco": "vs"
+    },
+    "dark": {
+      "colors": {
+        "textPrimary": "#e2e8f0",
+        "textSecondary": "#94a3b8",
+        "accent": "#5eead4",
+        "accentStrong": "#99f6e4",
+        "success": "#86efac",
+        "danger": "#fca5a5"
+      },
+      "monaco": "vs-dark"
+    }
+  }
+}

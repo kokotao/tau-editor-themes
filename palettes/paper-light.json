@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "type": "palette",
+  "id": "paper-light",
+  "name": "Paper Light",
+  "version": "1.0.0",
+  "author": "Tau Editor",
+  "defaultMode": "light",
+  "modes": {
+    "light": {
+      "colors": {
+        "textPrimary": "#292524",
+        "textSecondary": "#78716c",
+        "accent": "#c2410c",
+        "accentStrong": "#9a3412",
+        "success": "#15803d",
+        "danger": "#b91c1c"
+      }
+    },
+    "dark": {
+      "colors": {
+        "textPrimary": "#f5f5f4",
+        "textSecondary": "#a8a29e",
+        "accent": "#fdba74",
+        "accentStrong": "#fed7aa",
+        "success": "#86efac",
+        "danger": "#fca5a5"
+      }
+    }
+  }
+}

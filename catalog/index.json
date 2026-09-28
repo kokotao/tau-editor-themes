@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-28T00:00:00Z",
+  "themes": [
+    {
+      "id": "tau-solarized",
+      "name": "Tau Solarized",
+      "type": "theme",
+      "author": "Tau Editor",
+      "version": "1.0.0",
+      "description": "A balanced light and dark theme for everyday writing.",
+      "tags": ["light", "dark", "solarized", "official"],
+      "downloadUrl": "https://raw.githubusercontent.com/kokotao/tau-editor-themes/main/themes/tau-solarized.json",
+      "sourceUrl": "https://github.com/kokotao/tau-editor-themes/blob/main/themes/tau-solarized.json"
+    },
+    {
+      "id": "paper-light",
+      "name": "Paper Light",
+      "type": "palette",
+      "author": "Tau Editor",
+      "version": "1.0.0",
+      "description": "A soft warm light palette with readable text contrast.",
+      "tags": ["light", "paper", "warm"],
+      "downloadUrl": "https://raw.githubusercontent.com/kokotao/tau-editor-themes/main/palettes/paper-light.json",
+      "sourceUrl": "https://github.com/kokotao/tau-editor-themes/blob/main/palettes/paper-light.json"
+    }
+  ]
+}

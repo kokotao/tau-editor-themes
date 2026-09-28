@@ -1,0 +1,39 @@
+name: Validate themes
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate JSON files
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const files = [];
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const file = path.join(dir, entry.name);
+              if (entry.isDirectory()) walk(file);
+              else if (file.endsWith('.json')) files.push(file);
+            }
+          }
+          walk('.');
+          for (const file of files) JSON.parse(fs.readFileSync(file, 'utf8'));
+          const catalog = JSON.parse(fs.readFileSync('catalog/index.json', 'utf8'));
+          if (!Array.isArray(catalog.themes) || catalog.themes.length === 0) throw new Error('catalog.themes is empty');
+          const ids = new Set();
+          for (const item of catalog.themes) {
+            if (ids.has(item.id)) throw new Error(`duplicate catalog id: ${item.id}`);
+            ids.add(item.id);
+            if (!/^https:\/\/raw\.githubusercontent\.com\//.test(item.downloadUrl)) throw new Error(`invalid downloadUrl: ${item.id}`);
+          }
+          NODE
