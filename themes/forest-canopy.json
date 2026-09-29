@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "forest-canopy",
+  "name": "Forest Canopy",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "light",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#f0fdf4",
+        "panelBase": "#ffffff",
+        "textPrimary": "#163b2a",
+        "textSecondary": "#4b6b57",
+        "accentBrand": "#15803d",
+        "accentBrandStrong": "#166534",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#b91c1c"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#163b2a" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#0b1710",
+        "panelBase": "#13291b",
+        "textPrimary": "#e6f7ea",
+        "textSecondary": "#a4c6ab",
+        "accentBrand": "#4ade80",
+        "accentBrandStrong": "#86efac",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fca5a5"
+      },
+      "monaco": { "base": "vs-dark", "rules": [], "colors": { "editor.background": "#0b1710", "editor.foreground": "#e6f7ea" } }
+    }
+  }
+}

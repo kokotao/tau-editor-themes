@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "desert-sunset",
+  "name": "Desert Sunset",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "light",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#fff8f1",
+        "panelBase": "#fffdf9",
+        "textPrimary": "#4c2416",
+        "textSecondary": "#895c49",
+        "accentBrand": "#ea580c",
+        "accentBrandStrong": "#c2410c",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#b91c1c"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#fffdf9", "editor.foreground": "#4c2416" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#1c100b",
+        "panelBase": "#2a1912",
+        "textPrimary": "#fff1e8",
+        "textSecondary": "#d7a590",
+        "accentBrand": "#fb923c",
+        "accentBrandStrong": "#fdba74",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fca5a5"
+      },
+      "monaco": { "base": "vs-dark", "rules": [], "colors": { "editor.background": "#1c100b", "editor.foreground": "#fff1e8" } }
+    }
+  }
+}

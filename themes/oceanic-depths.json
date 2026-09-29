@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "oceanic-depths",
+  "name": "Oceanic Depths",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "dark",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#effaff",
+        "panelBase": "#ffffff",
+        "textPrimary": "#0c3040",
+        "textSecondary": "#4b6a77",
+        "accentBrand": "#0891b2",
+        "accentBrandStrong": "#0e7490",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#dc2626"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#0c3040" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#071a24",
+        "panelBase": "#0d2a38",
+        "textPrimary": "#e1f7fb",
+        "textSecondary": "#97c9d4",
+        "accentBrand": "#22d3ee",
+        "accentBrandStrong": "#67e8f9",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fca5a5"
+      },
+      "monaco": { "base": "vs-dark", "rules": [], "colors": { "editor.background": "#071a24", "editor.foreground": "#e1f7fb" } }
+    }
+  }
+}

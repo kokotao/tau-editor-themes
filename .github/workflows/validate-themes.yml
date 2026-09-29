@@ -29,11 +29,30 @@ jobs:
           walk('.');
           for (const file of files) JSON.parse(fs.readFileSync(file, 'utf8'));
           const catalog = JSON.parse(fs.readFileSync('catalog/index.json', 'utf8'));
-          if (!Array.isArray(catalog.items) || catalog.items.length === 0) throw new Error('catalog.items is empty');
+          if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.items) || catalog.items.length === 0) throw new Error('invalid catalog');
+          if (catalog.items.filter((item) => item.type === 'theme').length < 8) throw new Error('at least 8 theme packages are required');
           const ids = new Set();
           for (const item of catalog.items) {
             if (ids.has(item.id)) throw new Error(`duplicate catalog id: ${item.id}`);
             ids.add(item.id);
-            if (!item.file || item.file.startsWith('http:') || item.file.startsWith('javascript:')) throw new Error(`invalid file: ${item.id}`);
+            if (!/^(themes|palettes)\/[^/]+\.json$/.test(item.file)) throw new Error(`invalid file: ${item.id}`);
+            if (item.file.startsWith('http:') || item.file.startsWith('javascript:')) throw new Error(`invalid file: ${item.id}`);
+            const packagePath = item.file;
+            const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+            if (pkg.schemaVersion !== 2 || pkg.id !== item.id || pkg.type !== item.type) throw new Error(`package metadata mismatch: ${item.id}`);
+            if (!['light', 'dark'].includes(pkg.defaultMode)) throw new Error(`invalid defaultMode: ${item.id}`);
+            if (!pkg.modes || (!pkg.modes.light && !pkg.modes.dark)) throw new Error(`missing modes: ${item.id}`);
+            for (const mode of ['light', 'dark']) {
+              const branch = pkg.modes[mode];
+              if (!branch) continue;
+              const colors = pkg.type === 'palette' && !branch.colors ? branch : branch.colors;
+              if (!colors || typeof colors !== 'object') throw new Error(`missing colors: ${item.id}/${mode}`);
+              for (const [key, color] of Object.entries(colors)) {
+                if (!/^#[0-9a-fA-F]{6}$/.test(color)) throw new Error(`invalid color: ${item.id}/${mode}/${key}`);
+                if (pkg.type === 'palette' && ['bgApp', 'panelBase'].includes(key)) throw new Error(`palette background override: ${item.id}`);
+              }
+              if (pkg.type === 'theme' && (!colors.bgApp || !colors.textPrimary)) throw new Error(`theme requires bgApp/textPrimary: ${item.id}/${mode}`);
+              if (pkg.type === 'palette' && !colors.textPrimary) throw new Error(`palette requires textPrimary: ${item.id}/${mode}`);
+            }
           }
           NODE

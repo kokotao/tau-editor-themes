@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "violet-paper",
+  "name": "Violet Paper",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "light",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#faf7ff",
+        "panelBase": "#ffffff",
+        "textPrimary": "#28164b",
+        "textSecondary": "#69558f",
+        "accentBrand": "#7c3aed",
+        "accentBrandStrong": "#6d28d9",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#b91c1c"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#28164b" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#140d24",
+        "panelBase": "#21163a",
+        "textPrimary": "#f4edff",
+        "textSecondary": "#c5b4e5",
+        "accentBrand": "#a78bfa",
+        "accentBrandStrong": "#c4b5fd",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fda4af"
+      },
+      "monaco": { "base": "vs-dark", "rules": [], "colors": { "editor.background": "#140d24", "editor.foreground": "#f4edff" } }
+    }
+  }
+}

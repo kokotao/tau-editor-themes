@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "mono-contrast",
+  "name": "Mono Contrast",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "dark",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#f5f5f5",
+        "panelBase": "#ffffff",
+        "textPrimary": "#171717",
+        "textSecondary": "#525252",
+        "accentBrand": "#404040",
+        "accentBrandStrong": "#262626",
+        "stateSuccess": "#166534",
+        "stateDanger": "#991b1b"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#171717" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#0b0b0b",
+        "panelBase": "#171717",
+        "textPrimary": "#fafafa",
+        "textSecondary": "#a3a3a3",
+        "accentBrand": "#d4d4d4",
+        "accentBrandStrong": "#f5f5f5",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fca5a5"
+      },
+      "monaco": { "base": "hc-black", "rules": [], "colors": { "editor.background": "#0b0b0b", "editor.foreground": "#fafafa" } }
+    }
+  }
+}

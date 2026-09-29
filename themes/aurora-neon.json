@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "aurora-neon",
+  "name": "Aurora Neon",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "dark",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#f3f7ff",
+        "panelBase": "#ffffff",
+        "textPrimary": "#102a43",
+        "textSecondary": "#486581",
+        "accentBrand": "#7c3aed",
+        "accentBrandStrong": "#5b21b6",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#dc2626"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#102a43" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#0b1020",
+        "panelBase": "#131a2e",
+        "textPrimary": "#f4f7ff",
+        "textSecondary": "#afbdd3",
+        "accentBrand": "#22d3ee",
+        "accentBrandStrong": "#67e8f9",
+        "stateSuccess": "#4ade80",
+        "stateDanger": "#fb7185"
+      },
+      "monaco": { "base": "vs-dark", "rules": [], "colors": { "editor.background": "#0b1020", "editor.foreground": "#f4f7ff" } }
+    }
+  }
+}

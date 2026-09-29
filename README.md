@@ -10,6 +10,21 @@
 - `schemas/`：主题包与配色包 JSON Schema。
 - `examples/`：普通用户可直接复制修改的示例。
 
+## 当前主题
+
+市场已发布 8 个风格迥异的社区主题：
+
+- `Aurora Neon`：霓虹青紫、适合深色工作流
+- `Forest Canopy`：森林绿、低刺激阅读
+- `Rose Quartz`：玫瑰粉、柔和编辑体验
+- `Amber Terminal`：琥珀终端、复古技术风
+- `Violet Paper`：紫罗兰纸张、明亮文档风
+- `Oceanic Depths`：深海蓝、冷色专注风
+- `Desert Sunset`：沙漠橙、温暖夕阳风
+- `Mono Contrast`：黑白高对比、强调可读性
+
+每个主题都同时提供浅色和深色模式，可在 Tau Editor 设置页中安装后切换。
+
 ## 提交主题
 
 1. 复制 `examples/` 中的示例并修改 `id`、名称、作者、版本和颜色。

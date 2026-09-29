@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "author": "Tau Editor",
   "license": "MIT",
-  "defaultMode": "system",
+  "defaultMode": "light",
   "modes": {
     "light": {
       "colors": {
@@ -19,7 +19,7 @@
         "bgApp": "#f8fafc",
         "panelBase": "#ffffff"
       },
-      "monaco": "vs"
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#f8fafc", "editor.foreground": "#334155" } }
     },
     "dark": {
       "colors": {
@@ -32,7 +32,7 @@
         "bgApp": "#0f172a",
         "panelBase": "#111827"
       },
-      "monaco": "vs-dark"
+      "monaco": { "base": "vs-dark", "rules": [], "colors": { "editor.background": "#0f172a", "editor.foreground": "#e2e8f0" } }
     }
   }
 }

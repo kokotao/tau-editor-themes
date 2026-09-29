@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T00:00:00Z",
+  "generatedAt": "2026-09-29T00:00:00Z",
   "items": [
     {
       "id": "tau-solarized",
@@ -22,6 +22,94 @@
       "license": "MIT",
       "file": "palettes/paper-light.json",
       "tags": ["light", "paper", "warm"],
+      "preview": ""
+    },
+    {
+      "id": "aurora-neon",
+      "name": "Aurora Neon",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/aurora-neon.json",
+      "tags": ["neon", "cyan", "dark", "light"],
+      "preview": ""
+    },
+    {
+      "id": "forest-canopy",
+      "name": "Forest Canopy",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/forest-canopy.json",
+      "tags": ["green", "forest", "calm", "light", "dark"],
+      "preview": ""
+    },
+    {
+      "id": "rose-quartz",
+      "name": "Rose Quartz",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/rose-quartz.json",
+      "tags": ["rose", "pink", "soft", "light", "dark"],
+      "preview": ""
+    },
+    {
+      "id": "amber-terminal",
+      "name": "Amber Terminal",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/amber-terminal.json",
+      "tags": ["amber", "terminal", "retro", "dark"],
+      "preview": ""
+    },
+    {
+      "id": "violet-paper",
+      "name": "Violet Paper",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/violet-paper.json",
+      "tags": ["violet", "purple", "paper", "light", "dark"],
+      "preview": ""
+    },
+    {
+      "id": "oceanic-depths",
+      "name": "Oceanic Depths",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/oceanic-depths.json",
+      "tags": ["ocean", "cyan", "deep", "dark", "light"],
+      "preview": ""
+    },
+    {
+      "id": "desert-sunset",
+      "name": "Desert Sunset",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/desert-sunset.json",
+      "tags": ["orange", "desert", "sunset", "light", "dark"],
+      "preview": ""
+    },
+    {
+      "id": "mono-contrast",
+      "name": "Mono Contrast",
+      "type": "theme",
+      "author": "Tau Editor Community",
+      "version": "1.0.0",
+      "license": "MIT",
+      "file": "themes/mono-contrast.json",
+      "tags": ["monochrome", "contrast", "accessibility", "light", "dark"],
       "preview": ""
     }
   ]

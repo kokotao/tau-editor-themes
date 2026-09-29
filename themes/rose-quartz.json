@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "rose-quartz",
+  "name": "Rose Quartz",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "light",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#fff5f7",
+        "panelBase": "#ffffff",
+        "textPrimary": "#4a1d2f",
+        "textSecondary": "#7e5365",
+        "accentBrand": "#db2777",
+        "accentBrandStrong": "#be185d",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#be123c"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#4a1d2f" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#1d1018",
+        "panelBase": "#2b1623",
+        "textPrimary": "#fff0f6",
+        "textSecondary": "#d9a8bb",
+        "accentBrand": "#f472b6",
+        "accentBrandStrong": "#f9a8d4",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fda4af"
+      },
+      "monaco": { "base": "vs-dark", "rules": [], "colors": { "editor.background": "#1d1018", "editor.foreground": "#fff0f6" } }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "type": "theme",
+  "id": "amber-terminal",
+  "name": "Amber Terminal",
+  "version": "1.0.0",
+  "author": "Tau Editor Community",
+  "license": "MIT",
+  "defaultMode": "dark",
+  "modes": {
+    "light": {
+      "colors": {
+        "bgApp": "#fffaf0",
+        "panelBase": "#ffffff",
+        "textPrimary": "#3d2600",
+        "textSecondary": "#76551e",
+        "accentBrand": "#b45309",
+        "accentBrandStrong": "#92400e",
+        "stateSuccess": "#15803d",
+        "stateDanger": "#b91c1c"
+      },
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#fffaf0", "editor.foreground": "#3d2600" } }
+    },
+    "dark": {
+      "colors": {
+        "bgApp": "#171006",
+        "panelBase": "#24170a",
+        "textPrimary": "#fff4cc",
+        "textSecondary": "#e4c98a",
+        "accentBrand": "#fbbf24",
+        "accentBrandStrong": "#f59e0b",
+        "stateSuccess": "#86efac",
+        "stateDanger": "#fca5a5"
+      },
+      "monaco": { "base": "hc-black", "rules": [], "colors": { "editor.background": "#171006", "editor.foreground": "#fff4cc" } }
+    }
+  }
+}
