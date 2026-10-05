@@ -3,7 +3,7 @@
   "type": "theme",
   "id": "mono-contrast",
   "name": "Mono Contrast",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Tau Editor Community",
   "license": "MIT",
   "defaultMode": "dark",
@@ -19,7 +19,8 @@
         "stateSuccess": "#166534",
         "stateDanger": "#991b1b"
       },
-      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#171717" } }
+      "monaco": { "base": "vs", "rules": [], "colors": { "editor.background": "#ffffff", "editor.foreground": "#171717" } },
+      "ui": { "radius": { "base": 8, "control": 7, "card": 12, "panel": 14, "tab": 8, "dialog": 16, "badge": 999 } }
     },
     "dark": {
       "colors": {
@@ -32,7 +33,8 @@
         "stateSuccess": "#86efac",
         "stateDanger": "#fca5a5"
       },
-      "monaco": { "base": "hc-black", "rules": [], "colors": { "editor.background": "#0b0b0b", "editor.foreground": "#fafafa" } }
+      "monaco": { "base": "hc-black", "rules": [], "colors": { "editor.background": "#0b0b0b", "editor.foreground": "#fafafa" } },
+      "ui": { "radius": { "base": 8, "control": 7, "card": 12, "panel": 14, "tab": 8, "dialog": 16, "badge": 999 } }
     }
   }
 }

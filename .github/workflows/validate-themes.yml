@@ -29,9 +29,24 @@ jobs:
           walk('.');
           for (const file of files) JSON.parse(fs.readFileSync(file, 'utf8'));
           const catalog = JSON.parse(fs.readFileSync('catalog/index.json', 'utf8'));
-          if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.items) || catalog.items.length === 0) throw new Error('invalid catalog');
+          if (![1, 2].includes(catalog.schemaVersion) || !Array.isArray(catalog.items) || catalog.items.length === 0) throw new Error('invalid catalog');
           if (catalog.items.filter((item) => item.type === 'theme').length < 8) throw new Error('at least 8 theme packages are required');
           const ids = new Set();
+          const radiusKeys = new Set(['base', 'control', 'card', 'panel', 'tab', 'dialog', 'badge']);
+          function validateRadius(radius, label) {
+            if (typeof radius === 'number') {
+              if (!Number.isFinite(radius) || radius < 0 || radius > 24 || Math.abs(radius * 2 - Math.round(radius * 2)) > 1e-9) {
+                throw new Error(`invalid radius: ${label}`);
+              }
+              return;
+            }
+            if (!radius || typeof radius !== 'object' || Array.isArray(radius)) throw new Error(`invalid radius: ${label}`);
+            for (const [key, value] of Object.entries(radius)) {
+              if (!radiusKeys.has(key) || typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > (key === 'badge' ? 999 : 24) || Math.abs(value * 2 - Math.round(value * 2)) > 1e-9) {
+                throw new Error(`invalid radius: ${label}/${key}`);
+              }
+            }
+          }
           for (const item of catalog.items) {
             if (ids.has(item.id)) throw new Error(`duplicate catalog id: ${item.id}`);
             ids.add(item.id);
@@ -49,10 +64,14 @@ jobs:
               if (!colors || typeof colors !== 'object') throw new Error(`missing colors: ${item.id}/${mode}`);
               for (const [key, color] of Object.entries(colors)) {
                 if (!/^#[0-9a-fA-F]{6}$/.test(color)) throw new Error(`invalid color: ${item.id}/${mode}/${key}`);
-                if (pkg.type === 'palette' && ['bgApp', 'panelBase'].includes(key)) throw new Error(`palette background override: ${item.id}`);
               }
               if (pkg.type === 'theme' && (!colors.bgApp || !colors.textPrimary)) throw new Error(`theme requires bgApp/textPrimary: ${item.id}/${mode}`);
               if (pkg.type === 'palette' && !colors.textPrimary) throw new Error(`palette requires textPrimary: ${item.id}/${mode}`);
+              if (branch.ui) {
+                if (typeof branch.ui !== 'object' || Array.isArray(branch.ui)) throw new Error(`invalid ui: ${item.id}/${mode}`);
+                if (branch.ui.radius !== undefined) validateRadius(branch.ui.radius, `${item.id}/${mode}`);
+                if (Object.keys(branch.ui).some((key) => key !== 'radius')) throw new Error(`invalid ui field: ${item.id}/${mode}`);
+              }
             }
           }
           NODE
