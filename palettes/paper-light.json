@@ -3,30 +3,36 @@
   "type": "palette",
   "id": "paper-light",
   "name": "Paper Light",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Tau Editor",
   "license": "MIT",
   "defaultMode": "light",
   "modes": {
     "light": {
       "colors": {
+        "bgApp": "#f7f1e8",
+        "panelBase": "#fffaf2",
         "textPrimary": "#292524",
         "textSecondary": "#78716c",
         "accentBrand": "#c2410c",
         "accentBrandStrong": "#9a3412",
         "stateSuccess": "#15803d",
         "stateDanger": "#b91c1c"
-      }
+      },
+      "ui": { "radius": { "base": 8, "control": 7, "card": 12, "panel": 14, "tab": 8, "dialog": 16, "badge": 999 } }
     },
     "dark": {
       "colors": {
+        "bgApp": "#1c1917",
+        "panelBase": "#292524",
         "textPrimary": "#f5f5f4",
         "textSecondary": "#a8a29e",
         "accentBrand": "#fdba74",
         "accentBrandStrong": "#fed7aa",
         "stateSuccess": "#86efac",
         "stateDanger": "#fca5a5"
-      }
+      },
+      "ui": { "radius": { "base": 8, "control": 7, "card": 12, "panel": 14, "tab": 8, "dialog": 16, "badge": 999 } }
     }
   }
 }
